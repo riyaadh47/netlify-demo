@@ -1,0 +1,24 @@
+backend:
+  name: bitbucket
+  branch: master
+  repo: riyaadh-fakier/netlify-demo
+  api_root: https://api.bitbucket.org/2.0
+  base_url: https://api.netlify.com
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "_posts/"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "app"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Category", name: "category", widget: "select", options: ["getting-started", "communication", "working-at-nml", "development", "front-end", "performance", "qa"]}
+      - {label: "Snippet", name: "snippet", widget: "string"}
+      - {Label: "Pin", name: "sticky", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+media_folder: "images"
+public_folder: "/images"
