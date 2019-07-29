@@ -3,7 +3,8 @@ backend:
   branch: master
   repo: riyaadh47/netlify-demo
   fork_workflow: true
-  publish_mode: editorial_workflow
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "articles"
