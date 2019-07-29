@@ -2,8 +2,7 @@ backend:
   name: github
   branch: master
   repo: riyaadh47/netlify-demo
-  #api_root: https://api.bitbucket.org/2.0
-  #base_url: https://api.netlify.com
+  fork_workflow: true
 
 collections:
   - name: "articles"
