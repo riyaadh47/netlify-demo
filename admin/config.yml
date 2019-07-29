@@ -9,9 +9,10 @@ collections:
   - name: "articles"
     label: "Articles"
     folder: "_posts/"
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: _posts/{{slug}}
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "app"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
@@ -20,5 +21,5 @@ collections:
       - {Label: "Pin", name: "sticky", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "assets/images"
+public_folder: "assets/images/uploads"
